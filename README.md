@@ -103,14 +103,6 @@ Twitter account for news and releases: [@autoprefixer].
 * [Options](#options)
 * [Environment Variables](#environment-variables)
   * [Using environment variables to support CSS Grid prefixes in Create React App](#using-environment-variables-to-support-css-grid-prefixes-in-create-react-app)
-* [Grid Autoplacement support in IE](#grid-autoplacement-support-in-ie)
-  * [Beware of enabling autoplacement in old projects](#beware-of-enabling-autoplacement-in-old-projects)
-  * [Autoplacement limitations](#autoplacement-limitations)
-    * [Both columns and rows must be defined](#both-columns-and-rows-must-be-defined)
-    * [Repeat auto-fit and auto-fill are not supported](#repeat-auto-fit-and-auto-fill-are-not-supported)
-    * [No manual cell placement or column/row spans allowed inside an autoplacement grid](#no-manual-cell-placement-or-columnrow-spans-allowed-inside-an-autoplacement-grid)
-    * [Do not create `::before` and `::after` pseudo elements](#do-not-create-before-and-after-pseudo-elements)
-    * [When changing the `grid gap` value, columns and rows must be re-declared](#when-changing-the-grid-gap-value-columns-and-rows-must-be-re-declared)
 * [Debug](#debug)
 * [Security Contact](#security-contact)
 * [For Enterprise](#for-enterprise)
@@ -154,7 +146,7 @@ Second, you need to test every fix with Grid in IE. It is not an enable and
 forget feature, but it is still very useful.
 Financial Times and Yandex use it in production.
 
-For the fully documentation see [here](ie-grid-support.md)
+For the fully documentation see [here](ie-grid-support.md).
 
 ### Does it add polyfills?
 
