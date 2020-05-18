@@ -146,7 +146,7 @@ Second, you need to test every fix with Grid in IE. It is not an enable and
 forget feature, but it is still very useful.
 Financial Times and Yandex use it in production.
 
-For the fully documentation see [here](ie-grid-support.md).
+For the fully documentation see [here](IE-GRID-SUPPORT.md).
 
 ### Does it add polyfills?
 
