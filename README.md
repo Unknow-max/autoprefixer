@@ -137,10 +137,10 @@ Autoprefixer can be used to translate modern CSS Grid syntax into IE 10
 and IE 11 syntax, but this polyfill will not work in 100% of cases.
 This is why it is disabled by default.
 
-First, you need to enable Grid prefixes by using either the `grid: "autoplace"`
-option or the `/* autoprefixer grid: autoplace */` control comment.
+First, you need to enable Grid prefixes by using either the `grid: "autoplace"` (or `grid: "no-autoplace"`)
+option or the `/* autoprefixer grid: autoplace */` or (`/* autoprefixer grid: no-autoplace */`) control comment.
 Also you can use environment variable to enable Grid:
-`AUTOPREFIXER_GRID=autoplace npm build`.
+`AUTOPREFIXER_GRID=autoplace npm build` or (`AUTOPREFIXER_GRID=no-autoplace npm build`).
 
 Second, you need to test every fix with Grid in IE. It is not an enable and
 forget feature, but it is still very useful.
