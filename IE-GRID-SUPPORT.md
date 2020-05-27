@@ -2,49 +2,49 @@
 
 ## Contents
 
-  * [Contents](#contents)
+- [Contents](#contents)
 
-  * [Can I use grid layout in IE?](#can-i-use-grid-layout-in-ie)
+- [Can I use grid layout in IE?](#can-i-use-grid-layout-in-ie)
 
-  * [Suggested articles](#suggested-articles)
+- [Suggested articles](#suggested-articles)
 
-  * [Grid No-autoplacement support in IE](#grid-no-autoplacement-support-in-ie)
+- [Grid No-autoplacement support in IE](#grid-no-autoplacement-support-in-ie)
 
-  * [No-autoplacement limitations](#no-autoplacement-limitations)
+- [No-autoplacement limitations](#no-autoplacement-limitations)
 
-    * [Both columns and areas need be defined](#both-columns-and-areas-need-be-defined)
-    * [Repeat auto-fit and auto-fill are not supported](#repeat-auto-fit-auto-fill-are-not-supported)
-    * [When changing the `grid gap` value, columns and areas need to be re-declared](#when-changing-the-grid-gap-value-columns-and-areas-need-to-be-re-declared)
+  - [Both columns and areas need be defined](#both-columns-and-areas-need-be-defined)
+  - [Repeat auto-fit and auto-fill are not supported](#repeat-auto-fit-auto-fill-are-not-supported)
+  - [When changing the `grid gap` value, columns and areas need to be re-declared](#when-changing-the-grid-gap-value-columns-and-areas-need-to-be-re-declared)
 
-  * [Beware of enabling autoplacement in old projects](#beware-of-enabling-autoplacement-in-old-projects)
+- [Beware of enabling autoplacement in old projects](#beware-of-enabling-autoplacement-in-old-projects)
 
-  * [Autoplacement limitations](#autoplacement-limitations)
+- [Autoplacement limitations](#autoplacement-limitations)
 
-    * [Both columns and rows must be defined](#both-columns-and-rows-must-be-defined)
-    * [Repeat auto-fit and auto-fill are not supported](#repeat-auto-fit-and-auto-fill-are-not-supported)
-    * [No manual cell placement or column/row spans allowed inside an autoplacement grid](#no-manual-cell-placement-or-columnrow-spans-allowed-inside-an-autoplacement-grid)
-    * [Do not create `::before` and `::after` pseudo elements](#do-not-create-before-and-after-pseudo-elements)
-    * [When changing the `grid gap` value, columns and rows must be re-declared](#when-changing-the-grid-gap-value-columns-and-rows-must-be-re-declared)
+  - [Both columns and rows must be defined](#both-columns-and-rows-must-be-defined)
+  - [Repeat auto-fit and auto-fill are not supported](#repeat-auto-fit-and-auto-fill-are-not-supported)
+  - [No manual cell placement or column/row spans allowed inside an autoplacement grid](#no-manual-cell-placement-or-columnrow-spans-allowed-inside-an-autoplacement-grid)
+  - [Do not create `::before` and `::after` pseudo elements](#do-not-create-before-and-after-pseudo-elements)
+  - [When changing the `grid gap` value, columns and rows must be re-declared](#when-changing-the-grid-gap-value-columns-and-rows-must-be-re-declared)
 
-     ## Can I use grid layout in IE?
+  ## Can I use grid layout in IE?
 
-     If the `grid` option in set to `"autoplace"` or `"no-autoplace"` Autoprefixer will be able to translate your grid layout to support IE 10 and IE 11 browsers. In the actual state, Autoprefixer can translate in an IE friendly code most of the grid layouts, but at this time there still some translations that are not possibile (`eg. grid-auto-columns, grid-autor-rows...`) or limited (`eg. grid-gap...`). Remeber that this feature is not an enable and forget feature, you need to test **every grid layout fix in IE**, but it still very useful. Many companies use this in production, like Financial Times and Yandex.
+  If the `grid` option in set to `"autoplace"` or `"no-autoplace"` Autoprefixer will be able to translate your grid layout to support IE 10 and IE 11 browsers. In the actual state, Autoprefixer can translate in an IE friendly code most of the grid layouts, but at this time there still some translations that are not possibile (`eg. grid-auto-columns, grid-autor-rows...`) or limited (`eg. grid-gap...`). Remeber that this feature is not an enable and forget feature, you need to test **every grid layout fix in IE**, but it still very useful. Many companies use this in production, like Financial Times and Yandex.
 
-     ## Suggested articles
+  ## Suggested articles
 
-     In addition to the documentation, here you can found some useful additional articles about the topic:
+  In addition to the documentation, here you can found some useful additional articles about the topic:
 
-     * [The definitive guide about Grids in IE and Autoprefixer].
-     * [Rachel Andrew article], outdated but still worth a read.
-     * [`postcss-gap-properties`] to use new `gap` property
-       instead of old `grid-gap`.
-    * [`postcss-grid-kiss`] has alternate “everything in one property“ syntax,
-      which makes using Autoprefixer’s Grid translations safer.
+  - [The definitive guide about Grids in IE and Autoprefixer].
+  - [Rachel Andrew article], outdated but still worth a read.
+  - [`postcss-gap-properties`] to use new `gap` property
+    instead of old `grid-gap`.
+  - [`postcss-grid-kiss`] has alternate “everything in one property“ syntax,
+    which makes using Autoprefixer’s Grid translations safer.
 
-     [The definitive guide about Grids in IE and Autoprefixer]: https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/
-     [Rachel Andrew article]: https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/
-     [`postcss-gap-properties`]: https://github.com/jonathantneal/postcss-gap-properties
-     [`postcss-grid-kiss`]: https://github.com/sylvainpolletvillard/postcss-grid-kiss
+  [The definitive guide about Grids in IE and Autoprefixer]: https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/
+  [Rachel Andrew article]: https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/
+  [`postcss-gap-properties`]: https://github.com/jonathantneal/postcss-gap-properties
+  [`postcss-grid-kiss`]: https://github.com/sylvainpolletvillard/postcss-grid-kiss
 
 
     ## Grid No-autoplacement support in IE
@@ -65,48 +65,47 @@
    /* autoprefixer grid: no-autoplace */
 
    .grid {
-    display: grid;
-    grid-gap: 10px;
-    grid-template:
-     "a   b" 100px
-     "c   d" 100px /
-     1fr  1fr;
-    }
+     display: grid;
+     grid-gap: 10px;
+     grid-template:
+       "a   b" 100px
+       "c   d" 100px /
+       1fr 1fr;
+   }
 
-    .cell-A {
+   .cell-A {
      grid-area: a;
-    }
+   }
 
-    .cell-B {
+   .cell-B {
      grid-area: b;
-    }
+   }
 
-    .cell-C {
+   .cell-C {
      grid-area: c;
-    }
+   }
 
-    .cell-D {
+   .cell-D {
      grid-area: d;
-    }
-
+   }
    ```
 
-   ```css
-    /* Output CSS */
+  ```css
+  /* Output CSS */
 
-   /* autoprefixer grid: no-autoplace */
+  /* autoprefixer grid: no-autoplace */
 
-   .grid {
+  .grid {
     display: -ms-grid;
     display: grid;
     grid-gap: 10px;
     -ms-grid-rows: 100px 10px 100px;
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template:
-     "a   b" 100px
-     "c   d" 100px /
-     1fr  1fr;
-   }
+      "a   b" 100px
+      "c   d" 100px /
+      1fr 1fr;
+  }
 
   .cell-A {
     -ms-grid-row: 1;
@@ -131,50 +130,49 @@
     -ms-grid-column: 3;
     grid-area: d;
   }
-   ```
+  ```
 
-  In addition, you can simply change the `grid-template` or `grid-template-areas`  property with a media query and Autoprefixer will automatically update all of the grid cell coordinates for you.
-
+  In addition, you can simply change the `grid-template` or `grid-template-areas` property with a media query and Autoprefixer will automatically update all of the grid cell coordinates for you.
 
    ```css
-    /* Input CSS */
+   /* Input CSS */
 
    /* autoprefixer grid: no-autoplace */
 
-  .grid {
-   display: grid;
-   grid-gap: 10px;
-   grid-template:
-     "a   b" 100px
-     "c   d" 100px
-     "e   f" 100px /
-     1fr  1fr;
-  }
-
-   @media (min-width: 600px){
    .grid {
+     display: grid;
      grid-gap: 10px;
      grid-template:
-       "a   b   c" 100px
-       "d   e   f" 100px /
-       1fr  1fr 1fr;
+       "a   b" 100px
+       "c   d" 100px
+       "e   f" 100px /
+       1fr 1fr;
    }
-  }
+
+   @media (min-width: 600px) {
+     .grid {
+       grid-gap: 10px;
+       grid-template:
+         "a   b   c" 100px
+         "d   e   f" 100px /
+         1fr 1fr 1fr;
+     }
+   }
 
    .cell-A {
-    grid-area: a;
+     grid-area: a;
    }
 
    .cell-B {
-    grid-area: b;
+     grid-area: b;
    }
 
    .cell-C {
-    grid-area: c;
+     grid-area: c;
    }
 
    .cell-D {
-    grid-area: d;
+     grid-area: d;
    }
 
    .cell-E {
@@ -184,7 +182,6 @@
    .cell-F {
      grid-area: f;
    }
-
    ```
 
    ```css
@@ -192,98 +189,99 @@
 
    /* autoprefixer grid: no-autoplace */
 
-  .grid {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 10px;
-    -ms-grid-rows: 100px 10px 100px 10px 100px;
-    -ms-grid-columns: 1fr 10px 1fr;
-    grid-template: "a   b" 100px
-      "c   d" 100px
-     "e   f" 100px /
-      1fr  1fr;
-  }
-
-  @media (min-width: 600px) {
-  .grid {
+   .grid {
+     display: -ms-grid;
+     display: grid;
      grid-gap: 10px;
-     -ms-grid-rows: 100px 10px 100px;
-     -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-     grid-template: "a   b   c" 100px
-       "d   e   f" 100px /
-       1fr  1fr 1fr;
-    }
-  }
+     -ms-grid-rows: 100px 10px 100px 10px 100px;
+     -ms-grid-columns: 1fr 10px 1fr;
+     grid-template:
+       "a   b" 100px
+       "c   d" 100px
+       "e   f" 100px /
+       1fr 1fr;
+   }
 
-  .cell-A {
-   -ms-grid-row: 1;
-   -ms-grid-column: 1;
-   grid-area: a;
-  }
+   @media (min-width: 600px) {
+     .grid {
+       grid-gap: 10px;
+       -ms-grid-rows: 100px 10px 100px;
+       -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+       grid-template:
+         "a   b   c" 100px
+         "d   e   f" 100px /
+         1fr 1fr 1fr;
+     }
+   }
 
-  .cell-B {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    grid-area: b;
-  }
-
-  .cell-C {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: c;
-  }
-
-  .cell-D {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-    grid-area: d;
-  }
-
-  .cell-E {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    grid-area: e;
-  }
-
-  .cell-F {
-    -ms-grid-row: 5;
-    -ms-grid-column: 3;
-    grid-area: f;
-  }
-
-  @media (min-width: 600px) {
-    .cell-A {
-      -ms-grid-row: 1;
-      -ms-grid-column: 1;
-    }
-
-    .cell-B {
-      -ms-grid-row: 1;
-      -ms-grid-column: 3;
-    }
-
-    .cell-C {
+   .cell-A {
      -ms-grid-row: 1;
-     -ms-grid-column: 5;
+     -ms-grid-column: 1;
+     grid-area: a;
+   }
+
+   .cell-B {
+     -ms-grid-row: 1;
+     -ms-grid-column: 3;
+     grid-area: b;
+   }
+
+   .cell-C {
+     -ms-grid-row: 3;
+     -ms-grid-column: 1;
+     grid-area: c;
    }
 
    .cell-D {
      -ms-grid-row: 3;
-     -ms-grid-column: 1;
+     -ms-grid-column: 3;
+     grid-area: d;
    }
 
    .cell-E {
-     -ms-grid-row: 3;
-     -ms-grid-column: 3;
+     -ms-grid-row: 5;
+     -ms-grid-column: 1;
+     grid-area: e;
    }
 
    .cell-F {
-     -ms-grid-row: 3;
-     -ms-grid-column: 5;
-    }
-  }
+     -ms-grid-row: 5;
+     -ms-grid-column: 3;
+     grid-area: f;
+   }
 
-  ```
+   @media (min-width: 600px) {
+     .cell-A {
+       -ms-grid-row: 1;
+       -ms-grid-column: 1;
+     }
+
+     .cell-B {
+       -ms-grid-row: 1;
+       -ms-grid-column: 3;
+     }
+
+     .cell-C {
+       -ms-grid-row: 1;
+       -ms-grid-column: 5;
+     }
+
+     .cell-D {
+       -ms-grid-row: 3;
+       -ms-grid-column: 1;
+     }
+
+     .cell-E {
+       -ms-grid-row: 3;
+       -ms-grid-column: 3;
+     }
+
+     .cell-F {
+       -ms-grid-row: 3;
+       -ms-grid-column: 5;
+     }
+   }
+   ```
 
     ### No-autoplacement limitations
 
